@@ -26,7 +26,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'ksk.matsuo@gmail.com' => 'ksk.matsuo@gmail.com' }
   s.source           = { :git => 'https://github.com/ksk.matsuo@gmail.com/ARCardFlicker.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '11.4'
 
   s.source_files = 'ARCardFlicker/Classes/**/*'
   s.resource_bundles = {

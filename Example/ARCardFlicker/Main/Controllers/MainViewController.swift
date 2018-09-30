@@ -95,4 +95,7 @@ extension MainViewController: ARCardFlickViewControllerDelegate {
     func flickViewController(_ viewController: ARCardFlickViewController, didSkip: CardFlickable) {
         print("カードフリック！！ skip")
     }
+    func flickViewControllerFinished(_ viewController: ARCardFlickViewController) {
+        print("finished")
+    }
 }

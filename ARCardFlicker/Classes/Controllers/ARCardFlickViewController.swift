@@ -16,6 +16,7 @@ public protocol ARCardFlickViewControllerDelegate: class {
     func flickViewController(_ viewController: ARCardFlickViewController, didTap: CardFlickable)
     func flickViewController(_ viewController: ARCardFlickViewController, didLike: CardFlickable)
     func flickViewController(_ viewController: ARCardFlickViewController, didSkip: CardFlickable)
+    func flickViewControllerFinished(_ viewController: ARCardFlickViewController)
 }
 
 public class ARCardFlickViewController: UIViewController {
@@ -208,7 +209,7 @@ public class ARCardFlickViewController: UIViewController {
     }
 
     private func createCard(position: SCNVector3, image: UIImage) -> SCNNode {
-        let box = SCNBox(width: 0.16, height: 0.0015, length: 0.23, chamferRadius: 0.05)
+        let box = SCNBox(width: 0.16, height: 0.001, length: 0.23, chamferRadius: 0.05)
         let boxNode = SCNNode(geometry: box)
         boxNode.name = "card"
         boxNode.position = position
@@ -251,6 +252,7 @@ public class ARCardFlickViewController: UIViewController {
 
         viewModel.state
             .observeOn(MainScheduler.instance)
+            .distinctUntilChanged()
             .subscribe(onNext: { [weak self] (state) in
                 guard let _self = self else { return }
                 switch state {
@@ -258,6 +260,10 @@ public class ARCardFlickViewController: UIViewController {
                 case .cardAdding:
                     guard let stageNode = _self.viewModel.stageNode else { return }
                     self?.delegate?.flickViewController(_self, didTapStageNode: stageNode)
+
+                case .finished:
+                    self?.delegate?.flickViewControllerFinished(_self)
+
                 default: break
                 }
             })
@@ -266,8 +272,10 @@ public class ARCardFlickViewController: UIViewController {
         Observable<Int>.interval(0.05, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (_) in
                 guard let _self = self else { return }
+                guard _self.viewModel.state.value == .cardAdding || _self.viewModel.state.value == .flicking else { return }
                 guard _self.viewModel.cards.count > 0 else { return }
                 guard let card = _self.viewModel.cards.first(where: { !$0.displayed }) else {
+                    _self.viewModel.checkFinished()
                     return
                 }
                 _self.arView.appendCard(card)

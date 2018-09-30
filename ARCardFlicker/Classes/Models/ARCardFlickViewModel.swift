@@ -94,9 +94,7 @@ public class ARCardFlickViewModel {
 
     // MARK: Class Methods
     public func appendCard(card: CardFlickable) {
-        var newCards = Array(cards)
-        newCards.append(ARCard(value: card))
-        self.cards = newCards
+        self.cards.append(ARCard(value: card))
     }
 
     // MARK: Private Methods
@@ -126,18 +124,25 @@ public class ARCardFlickViewModel {
         if target.node == skipTarget?.node {
             doSkip(card, point: point)
         }
-
         // 処理したカードは除外
         self.execCards = self.execCards.filter({ $0.node != card.node })
+    }
+
+    func checkFinished() {
+        guard cards.count > 0 && cards.filter({ !$0.executed }).count == 0 else { return }
+        guard state.value != .finished else { return }
+        state.accept(.finished)
     }
 
     // MARK: Public Methods
     func doLike(_ card: ARCard, point: SCNVector3) {
         self.event.accept(.likeAnimation(card: card, point: point))
+        card.executed = true
     }
 
     func doSkip(_ card: ARCard, point: SCNVector3) {
         self.event.accept(.skipAnimation(card: card, point: point))
+        card.executed = true
     }
 }
 

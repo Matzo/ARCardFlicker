@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ARCardFlicker: 26e18ab644836ece4a703a0de914be731716139a
+  ARCardFlicker: 26a5cff4fb53671bf80ba09f3ae3a15442ee261a
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
