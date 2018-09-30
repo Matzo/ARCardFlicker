@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NNR-sc-uyI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card Flick View Controller-->
+        <scene sceneID="UWd-mc-tMM">
+            <objects>
+                <viewController id="NNR-sc-uyI" customClass="ARCardFlickViewController" customModule="HelloAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oUo-5K-3HX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yF-KO-G2u" customClass="ARCardFlickView" customModule="HelloAR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NNR-sc-uyI" id="kCe-pN-rOo"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRA-X3-cyU">
+                                <rect key="frame" x="16" y="630" width="171.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7yF-KO-G2u" secondAttribute="trailing" id="8AN-GC-sO3"/>
+                            <constraint firstItem="Cac-ta-FZ9" firstAttribute="bottom" secondItem="YRA-X3-cyU" secondAttribute="bottom" constant="16" id="9VG-07-Wlb"/>
+                            <constraint firstItem="7yF-KO-G2u" firstAttribute="leading" secondItem="oUo-5K-3HX" secondAttribute="leading" id="T2W-v9-ICC"/>
+                            <constraint firstItem="YRA-X3-cyU" firstAttribute="leading" secondItem="Cac-ta-FZ9" secondAttribute="leading" constant="16" id="hhZ-Pz-qVi"/>
+                            <constraint firstAttribute="bottom" secondItem="7yF-KO-G2u" secondAttribute="bottom" id="hxR-Hn-gl7"/>
+                            <constraint firstItem="7yF-KO-G2u" firstAttribute="top" secondItem="oUo-5K-3HX" secondAttribute="top" id="lbj-KU-T7v"/>
+                            <constraint firstItem="Cac-ta-FZ9" firstAttribute="centerX" secondItem="YRA-X3-cyU" secondAttribute="trailing" id="y8C-gd-oHC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cac-ta-FZ9"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="7yF-KO-G2u" id="ugR-13-Q31"/>
+                        <outlet property="sessionInfoLabel" destination="YRA-X3-cyU" id="Zon-uh-Vw7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76G-gm-1Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="173"/>
+        </scene>
+    </scenes>
+</document>

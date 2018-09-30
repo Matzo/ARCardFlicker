@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'ARCardFlicker_Example' do
+  pod 'ARCardFlicker', :path => '../'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+  target 'ARCardFlicker_Tests' do
+    inherit! :search_paths
+
+  end
+end

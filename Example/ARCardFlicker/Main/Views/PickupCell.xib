@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PickupCell" customModule="HelloAR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="460"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="460"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeA-Op-WRx">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="460"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysz-ih-HVf">
+                                <rect key="frame" x="68" y="412" width="70" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="IOw-Iw-Hsa"/>
+                                    <constraint firstAttribute="width" constant="70" id="Q0Q-Wc-jPP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpY-gy-C4j">
+                                <rect key="frame" x="146" y="412" width="161" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="xDH-OW-yF6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vpY-gy-C4j" firstAttribute="centerY" secondItem="ysz-ih-HVf" secondAttribute="centerY" id="Qfm-TG-2EC"/>
+                            <constraint firstItem="vpY-gy-C4j" firstAttribute="leading" secondItem="ysz-ih-HVf" secondAttribute="trailing" constant="8" id="Uhh-Zw-T0g"/>
+                            <constraint firstAttribute="trailing" secondItem="vpY-gy-C4j" secondAttribute="trailing" constant="12" id="nhO-1a-BMB"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-fc-0E2">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="319"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="5oi-Or-Gof" customClass="UserImageView" customModule="HelloAR" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="0.0" width="319" height="319"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5oi-Or-Gof" secondAttribute="height" multiplier="1:1" id="AO5-Kw-qwY"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_rocket.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pt2-3V-MFY">
+                                <rect key="frame" x="8" y="8" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="afG-by-Xeb"/>
+                                    <constraint firstAttribute="width" constant="46" id="ePv-9C-LYy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5oi-Or-Gof" secondAttribute="bottom" id="DL1-1I-8Z3"/>
+                            <constraint firstItem="5oi-Or-Gof" firstAttribute="centerX" secondItem="SJ3-fc-0E2" secondAttribute="centerX" id="Knj-hP-Fmq"/>
+                            <constraint firstItem="5oi-Or-Gof" firstAttribute="top" secondItem="SJ3-fc-0E2" secondAttribute="top" id="Q8W-I5-7q9"/>
+                            <constraint firstItem="Pt2-3V-MFY" firstAttribute="leading" secondItem="SJ3-fc-0E2" secondAttribute="leading" constant="8" id="WkH-Ut-4mS"/>
+                            <constraint firstItem="Pt2-3V-MFY" firstAttribute="top" secondItem="SJ3-fc-0E2" secondAttribute="top" constant="8" id="a8e-pC-NjF"/>
+                            <constraint firstAttribute="width" secondItem="SJ3-fc-0E2" secondAttribute="height" multiplier="1:1.15" priority="250" id="fPb-s6-bon"/>
+                            <constraint firstAttribute="width" secondItem="SJ3-fc-0E2" secondAttribute="height" multiplier="1:1" priority="750" id="zwF-FE-tYM"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="36" translatesAutoresizingMaskIntoConstraints="NO" id="V8W-6s-cnn" customClass="UserImagesStackView" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="183" y="267" width="120" height="36"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="291" placeholderIntrinsicHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="pHJ-da-7yt" customClass="AttributedLabel" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="331" width="287" height="20"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="291" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="FPl-n2-agL" customClass="AttributedLabel" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="359" width="135.5" height="16"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="291" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="fsd-rr-XUU" customClass="AttributedLabel" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="378" width="135.5" height="16"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="291" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="qI8-4n-vt2" customClass="AttributedLabel" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="167.5" y="359" width="135.5" height="16"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="291" placeholderIntrinsicHeight="16" translatesAutoresizingMaskIntoConstraints="NO" id="YKe-Uf-v3D" customClass="AttributedLabel" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="167.5" y="378" width="135.5" height="16"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svh-P0-cv1" customClass="UserImageView" customModule="HelloAR" customModuleProvider="target">
+                        <rect key="frame" x="16" y="406" width="40" height="40"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="cnf-W9-plW"/>
+                            <constraint firstAttribute="width" secondItem="svh-P0-cv1" secondAttribute="height" multiplier="1:1" id="fCR-IG-wKl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SJ3-fc-0E2" secondAttribute="trailing" id="0XY-Az-oo1"/>
+                <constraint firstAttribute="centerX" secondItem="qI8-4n-vt2" secondAttribute="leading" constant="-8" id="20P-ln-zS2"/>
+                <constraint firstAttribute="trailing" secondItem="pHJ-da-7yt" secondAttribute="trailing" constant="16" id="2Fl-Xa-QQV"/>
+                <constraint firstItem="svh-P0-cv1" firstAttribute="top" secondItem="fsd-rr-XUU" secondAttribute="bottom" constant="12" id="3u1-LB-3T8"/>
+                <constraint firstItem="ysz-ih-HVf" firstAttribute="leading" secondItem="svh-P0-cv1" secondAttribute="trailing" constant="12" id="4HS-l2-J2o"/>
+                <constraint firstItem="svh-P0-cv1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="70j-34-qcL"/>
+                <constraint firstAttribute="bottom" secondItem="LeA-Op-WRx" secondAttribute="bottom" id="83T-h0-Ftc"/>
+                <constraint firstItem="LeA-Op-WRx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9WY-oD-FRp"/>
+                <constraint firstItem="V8W-6s-cnn" firstAttribute="bottom" secondItem="SJ3-fc-0E2" secondAttribute="bottom" constant="-16" id="9nv-iP-W2x"/>
+                <constraint firstItem="ysz-ih-HVf" firstAttribute="centerY" secondItem="svh-P0-cv1" secondAttribute="centerY" id="BNc-hJ-SNw"/>
+                <constraint firstItem="FPl-n2-agL" firstAttribute="top" secondItem="pHJ-da-7yt" secondAttribute="bottom" constant="8" id="DYF-fd-uaQ"/>
+                <constraint firstItem="fsd-rr-XUU" firstAttribute="top" secondItem="FPl-n2-agL" secondAttribute="bottom" constant="3" id="GoU-GB-v68"/>
+                <constraint firstAttribute="trailing" secondItem="qI8-4n-vt2" secondAttribute="trailing" constant="16" id="K1l-GU-Ojs"/>
+                <constraint firstItem="FPl-n2-agL" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-8" id="Oq1-nA-EPf"/>
+                <constraint firstItem="LeA-Op-WRx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QMN-8D-T9S"/>
+                <constraint firstItem="FPl-n2-agL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="RMv-nn-wG8"/>
+                <constraint firstAttribute="trailing" secondItem="LeA-Op-WRx" secondAttribute="trailing" id="S2C-cb-fVO"/>
+                <constraint firstAttribute="centerX" secondItem="YKe-Uf-v3D" secondAttribute="leading" constant="-8" id="UhK-AI-GzJ"/>
+                <constraint firstAttribute="trailing" secondItem="YKe-Uf-v3D" secondAttribute="trailing" constant="16" id="XzK-9B-bWY"/>
+                <constraint firstItem="YKe-Uf-v3D" firstAttribute="top" secondItem="qI8-4n-vt2" secondAttribute="bottom" constant="3" id="bSg-Kw-VpQ"/>
+                <constraint firstAttribute="trailing" secondItem="V8W-6s-cnn" secondAttribute="trailing" constant="16" id="dkL-RH-E9k"/>
+                <constraint firstItem="fsd-rr-XUU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="iFq-qd-72P"/>
+                <constraint firstItem="fsd-rr-XUU" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-8" id="iPS-gf-h29"/>
+                <constraint firstItem="qI8-4n-vt2" firstAttribute="top" secondItem="pHJ-da-7yt" secondAttribute="bottom" constant="8" id="ijD-5D-dp1"/>
+                <constraint firstItem="SJ3-fc-0E2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jyC-ue-nTt"/>
+                <constraint firstItem="pHJ-da-7yt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="kU2-aJ-tYJ"/>
+                <constraint firstItem="SJ3-fc-0E2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ruu-X3-JBr"/>
+                <constraint firstItem="pHJ-da-7yt" firstAttribute="top" secondItem="SJ3-fc-0E2" secondAttribute="bottom" constant="12" id="zxm-tZ-f92"/>
+            </constraints>
+            <size key="customSize" width="257" height="247"/>
+            <connections>
+                <outlet property="bodyHeightLabel" destination="FPl-n2-agL" id="xjg-6b-jaB"/>
+                <outlet property="borderView" destination="LeA-Op-WRx" id="Nlp-6O-dFg"/>
+                <outlet property="crosspathCountLabel" destination="ysz-ih-HVf" id="BsI-CB-e6e"/>
+                <outlet property="crosspathLocationLabel" destination="vpY-gy-C4j" id="d9e-l1-s5l"/>
+                <outlet property="hobbyLabel" destination="YKe-Uf-v3D" id="Vyd-Xe-OAe"/>
+                <outlet property="imageAspectSquare" destination="zwF-FE-tYM" id="vbH-ET-HaG"/>
+                <outlet property="imageAspectTall" destination="fPb-s6-bon" id="3yG-ks-yrZ"/>
+                <outlet property="jobLabel" destination="qI8-4n-vt2" id="sHY-9B-fwo"/>
+                <outlet property="margin1" destination="zxm-tZ-f92" id="jTI-v2-gkQ"/>
+                <outlet property="margin10" destination="XzK-9B-bWY" id="3qk-3X-SR0"/>
+                <outlet property="margin11" destination="70j-34-qcL" id="INO-I8-Gbg"/>
+                <outlet property="margin12" destination="kU2-aJ-tYJ" id="Mxf-IO-L5V"/>
+                <outlet property="margin13" destination="2Fl-Xa-QQV" id="RRu-sI-KVN"/>
+                <outlet property="margin15" destination="Oq1-nA-EPf" id="EOF-S5-kYQ"/>
+                <outlet property="margin16" destination="iPS-gf-h29" id="v7t-hl-Au7"/>
+                <outlet property="margin2" destination="DYF-fd-uaQ" id="6gb-Qy-rya"/>
+                <outlet property="margin3" destination="ijD-5D-dp1" id="Rkb-oD-vJP"/>
+                <outlet property="margin4" destination="GoU-GB-v68" id="Kc1-XT-fNF"/>
+                <outlet property="margin5" destination="bSg-Kw-VpQ" id="lEQ-Zd-eSa"/>
+                <outlet property="margin6" destination="3u1-LB-3T8" id="vKd-58-Yo1"/>
+                <outlet property="margin7" destination="RMv-nn-wG8" id="b1u-Ld-RNj"/>
+                <outlet property="margin8" destination="iFq-qd-72P" id="tRA-SU-EBv"/>
+                <outlet property="margin9" destination="K1l-GU-Ojs" id="P7s-Ve-CHC"/>
+                <outlet property="myImageView" destination="svh-P0-cv1" id="inw-bN-4UE"/>
+                <outlet property="myImageViewSize" destination="cnf-W9-plW" id="3t5-sM-tcr"/>
+                <outlet property="nameLabel" destination="pHJ-da-7yt" id="uEN-TZ-EDP"/>
+                <outlet property="rocketBadge" destination="Pt2-3V-MFY" id="nQV-J9-uBh"/>
+                <outlet property="salaryLabel" destination="fsd-rr-XUU" id="6kF-aQ-EYI"/>
+                <outlet property="userImageView" destination="5oi-Or-Gof" id="0Lh-Jc-BVO"/>
+                <outlet property="userImagesStackView" destination="V8W-6s-cnn" id="zZP-9U-cas"/>
+            </connections>
+            <point key="canvasLocation" x="293.5" y="418"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_rocket.png" width="46" height="46"/>
+    </resources>
+</document>

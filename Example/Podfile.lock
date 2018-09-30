@@ -1,0 +1,25 @@
+PODS:
+  - ARCardFlicker (0.1.0):
+    - RxCocoa
+    - RxSwift
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+
+DEPENDENCIES:
+  - ARCardFlicker (from `../`)
+  - RxCocoa
+  - RxSwift
+
+EXTERNAL SOURCES:
+  ARCardFlicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ARCardFlicker: 26e18ab644836ece4a703a0de914be731716139a
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+
+PODFILE CHECKSUM: a8ac8e39089bbf53dfc3b57239aee4912e03804b
+
+COCOAPODS: 1.4.0
