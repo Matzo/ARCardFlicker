@@ -13,8 +13,8 @@
 - [x] Likable
 - [x] Skippable
 - [x] Flick control
-- [ ] Modify like animation
-- [ ] Modify skip animation
+- [ ] Like animation
+- [ ] Skip animation
 - [ ] Add enemies
 
 ## Example
