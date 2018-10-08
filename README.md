@@ -5,6 +5,16 @@
 [![License](https://img.shields.io/cocoapods/l/ARCardFlicker.svg?style=flat)](https://cocoapods.org/pods/ARCardFlicker)
 [![Platform](https://img.shields.io/cocoapods/p/ARCardFlicker.svg?style=flat)](https://cocoapods.org/pods/ARCardFlicker)
 
+## Features
+
+- [x] Display flickable cards in AR.
+- [x] Likable
+- [x] Skippable
+- [x] Flick control
+- [ ] Modify like animation
+- [ ] Modify skip animation
+- [ ] Add enemies
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
