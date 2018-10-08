@@ -32,7 +32,7 @@ pod 'ARCardFlicker'
 
 ## Author
 
-ksk.matsuo@gmail.com, ksk.matsuo@gmail.com
+ksk.matsuo@gmail.com
 
 ## License
 
