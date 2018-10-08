@@ -7,6 +7,8 @@
 
 ## Features
 
+![arflicker](https://user-images.githubusercontent.com/144278/46596506-cb484e80-cb17-11e8-930e-ae319e75a089.gif)
+
 - [x] Display flickable cards in AR.
 - [x] Likable
 - [x] Skippable
